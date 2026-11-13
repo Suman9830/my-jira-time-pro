@@ -24,7 +24,7 @@ export default function Nav({ me }: { me: Me | null }) {
       {link("/timesheet", "Timesheet")}
       {link("/settings", "Settings")}
       <span className="spacer" />
-      {me && <span className="muted">{me.name}</span>}
+      {me && <span className="muted nav-user">{me.name}</span>}
       <button onClick={logout}>Sign out</button>
     </nav>
   );

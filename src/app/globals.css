@@ -82,10 +82,33 @@ th { font-size: 12px; color: var(--muted); font-weight: 600; }
 .cal .day.today .n { color: var(--brand); font-weight: 700; }
 .cal .day .n { font-size: 12px; color: var(--muted); }
 .cal .day .tot { font-weight: 600; margin-top: 4px; }
+.show-sm { display: none; }
+html { -webkit-text-size-adjust: 100%; }
+body { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); padding-bottom: env(safe-area-inset-bottom); }
 @media (max-width: 640px) {
   .grid2 { grid-template-columns: 1fr; }
   .cal .day { min-height: 54px; padding: 3px; }
+  .cal .day .tot { font-size: 11px; }
   th.hide-sm, td.hide-sm { display: none; }
+  .show-sm { display: block; font-size: 12px; }
+  .wrap { padding: 10px; }
+  /* nav: brand + user on the first line, links scroll below */
+  .nav { flex-wrap: wrap; gap: 6px 14px; padding: 8px 10px; }
+  .nav .nav-user { display: none; }
+  /* prevent iOS zoom on focus, bigger touch targets */
+  input, select, textarea { font-size: 16px; padding: 9px 10px; }
+  input[type="checkbox"] { width: 20px; height: 20px; }
+  button { padding: 9px 12px; min-height: 40px; }
+  button.link { padding: 8px 8px; min-height: 40px; }
+  .grow { min-width: 100%; }
+  .row > div:not(.grow) { flex: 1 1 130px; }
+  /* modals become full-screen sheets */
+  .modal-bg { padding: 0; align-items: stretch; }
+  .modal { max-width: none !important; min-height: 100%; border-radius: 0; padding: 14px; }
+  .picker-opt { padding: 11px 10px; }
+  .tl-scroll { max-height: 360px; }
+  /* table action buttons wrap under each other */
+  td { padding: 8px 4px; }
 }
 
 /* day timeline */

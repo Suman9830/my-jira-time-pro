@@ -182,6 +182,11 @@ export default function IssuesPage() {
                     {i.assignee ? ` · ${i.assignee}` : ""}
                     {i.parentKey ? ` · ${i.parentKey}` : ""}
                   </div>
+                  <div className="muted show-sm">
+                    {[i.priority, `${fmtDuration(i.estimateSec)} / ${fmtDuration(i.spentSec)}`, i.dueDate ? `Due ${fmtDate(i.dueDate)}` : ""]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </div>
                 </td>
                 <td>
                   <StatusMenu
