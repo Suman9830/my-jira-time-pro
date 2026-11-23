@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export const BASE_URL = "https://my-jira-time-pro.vercel.app";
 export const SUPPORT_EMAIL = "sumandebnathoffice@gmail.com";
-export const VENDOR = "Suman Debnath";
+export const VENDOR = "MyJiraTimePro";
 export const UPDATED = "November 23, 2026";
 
 export function LegalPage({ title, children }: { title: string; children: ReactNode }) {
