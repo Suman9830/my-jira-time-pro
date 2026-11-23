@@ -29,7 +29,7 @@ async function doRefresh(s: Session): Promise<void> {
 }
 
 /** Refresh once per session even when many requests fire together (refresh tokens rotate). */
-async function ensureFresh(s: Session): Promise<void> {
+export async function ensureFresh(s: Session): Promise<void> {
   if (s.expiresAt - Date.now() > 60_000) return;
   let p = refreshing.get(s.id);
   if (!p) {
