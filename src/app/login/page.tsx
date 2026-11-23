@@ -10,6 +10,9 @@ export default function LoginPage({ searchParams }: { searchParams: { error?: st
             Sign in with Atlassian
           </button>
         </a>
+        <p className="muted" style={{ fontSize: 12, marginBottom: 0 }}>
+          <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/support">Support</a>
+        </p>
       </div>
     </main>
   );
